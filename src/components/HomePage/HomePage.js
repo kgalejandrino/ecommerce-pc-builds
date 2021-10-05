@@ -9,6 +9,19 @@ import build5 from '../../assets/build5.jpg';
 import build6 from '../../assets/build6.jpg';
 import build7 from '../../assets/build7.jpg';
 import build8 from '../../assets/build8.jpg';
+import rainbowBuild from '../../assets/rainbow-build.png';
+import Button from '../UI/Button/Button';
+
+const buildImages = [
+    { 'src': build1, 'alt': 'pc build with red rgb light' },
+    { 'src': build2, 'alt': 'pc build with rainbow rgb light' },
+    { 'src': build3, 'alt': 'pc build with green rgb light' },
+    { 'src': build4, 'alt': 'pc build with purple rgb light' },
+    { 'src': build5, 'alt': 'pc build with light pink rgb light' },
+    { 'src': build6, 'alt': 'pc build with dark blue rgb light' },
+    { 'src': build7, 'alt': 'pc build with purple and pink rgb light' },
+    { 'src': build8, 'alt': 'pc build with light blue rgb light' },
+];
 
 const HomePage = () => {
     return (
@@ -41,31 +54,27 @@ const HomePage = () => {
                 </div>
             </section>
             <section className={classes['section-pcbuilds']}>
-                <div className={classes['img-wrapper']}>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build1} alt="pc build with red rgb light" />
-                    </figure>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build2} alt="pc build with rainbow rgb light" />
-                    </figure>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build3} alt="pc build with green rgb light" />
-                    </figure>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build4} alt="pc build with purple rgb light" />
-                    </figure>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build5} alt="pc build with light pink rgb light" />
-                    </figure>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build6} alt="pc build with dark blue rgb light" />
-                    </figure>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build7} alt="pc build with purple and pink rgb light" />
-                    </figure>
-                    <figure className={classes['pc-photo']}>
-                        <img src={build8} alt="pc build with light blue rgb light" />
-                    </figure>
+                <div className={classes['pcbuilds-wrapper']}>
+                    { buildImages.map(img => {
+                        return <figure className={classes['pc-photo']}>
+                                    <img src={img.src} alt={img.alt} />
+                               </figure>
+                    })}
+                </div>
+            </section>
+            <section className={`${classes['section-shop']} ${classes.row}`}>
+                <h1>Build Now &mdash; Buy Now </h1>
+                <div className={classes['shop-wrapper']}>
+                    <div className={classes['img-container']}>
+                        <img src={rainbowBuild} alt="pc build with rainbow rgb light and white case" />
+                    </div>
+                    <div className={classes['description-container']}>
+                        <p>Nemirk pc is available in full customization. Schedule an appointment with one of our IT and we can guide you from component selection to building your dream gaming setup. </p>
+                        <div className={classes['btn-container']}>
+                            <Button btnType={'btn-success'} btnCustom={'btn-buy'}>Build Now</Button>
+                            <Button btnType={'btn-success'} btnCustom={'btn-buy'}>Shop Now</Button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </Fragment>

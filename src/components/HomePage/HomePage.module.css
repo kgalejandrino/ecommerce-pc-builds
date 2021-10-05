@@ -1,5 +1,5 @@
 /* Reusable */
-section { margin: 48px 0; }
+section { margin: 64px 0; }
 
 section p { 
     color: #ccc; 
@@ -85,7 +85,7 @@ h1::after {
 }
 
 /* Section: PC Build */
-.img-wrapper {
+.pcbuilds-wrapper {
     display: flex;
     flex-wrap: wrap;
 }
@@ -109,4 +109,41 @@ h1::after {
     opacity: 1;
     transform: scale(1);
 }
+
+/* Section: Shop */
+.shop-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.img-container {
+    width: 45%;
+    /* border: 1px solid red; */
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.description-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 180px;
+}
+
+.description-container p {
+    width: 80%;
+    font-size: 24px;
+}
+
+.btn-container {
+    width: 80%;
+    margin-top: 24px;
+}
+
+
 

@@ -1,0 +1,23 @@
+.btn {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 12px 18px;
+    margin-right: 12px;
+    text-transform: uppercase;
+}
+
+.btn-success {
+    background-color: #0A81D1;
+}
+
+.btn-success:hover {
+    background-color: #0063a5;
+    transition: background-color 0.5s;
+}
+
+.btn-buy {
+    font-size: 22px;
+    border-radius: 6px;
+}
