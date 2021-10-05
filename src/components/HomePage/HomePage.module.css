@@ -1,0 +1,112 @@
+/* Reusable */
+section { margin: 48px 0; }
+
+section p { 
+    color: #ccc; 
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.row {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+h1::after {
+    content: " ";
+    border-bottom: 2px solid #0A81D1;
+    height: 2px;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 24px;
+    display: block;
+}
+
+/* Section: Hero Box */
+.section-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../../assets/hero-img.jpg');
+    background-size: cover;
+    background-position: 25% 75%;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text-box p:nth-of-type(1) {
+    font-size: 32px;
+    color: #ccc;
+}
+
+.hero-text-box p:nth-of-type(2) {
+    font-size: 54px;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 36px;
+}
+
+/* Section: Features */
+.section-features .description {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+}
+
+.card { width: 25%;}
+
+.card span {
+    font-size: 48px;
+    color: #0A81D1;
+}
+
+.card h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 16px 0;
+}
+
+/* Section: PC Build */
+.img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pc-photo {
+    width: 25%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.pc-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 0.3s, opacity 0.3s ease-in;
+}
+
+.pc-photo img:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
