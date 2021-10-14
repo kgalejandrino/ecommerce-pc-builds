@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 
-import Header from './components/Layout/Header';
-import Home from './components/pages/Home';
+import Layout from './components/Layout/Layout';
+import Home from './pages/Home';
 
 function App() {
   return (
     <Fragment>
-      <Header>
+      <Layout>
         <Home />
-      </Header>
+      </Layout>
     </Fragment>
   );
 }

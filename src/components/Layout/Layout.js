@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 
-import classes from './Header.module.css';
+import classes from './Layout.module.css';
 import Logo from '../Logo/Logo';
 import Navigations from '../Navigations/Navigations';
+import Footer from '../Footer/Footer';
 
 const Header = (props) => {
     return (
@@ -18,6 +19,7 @@ const Header = (props) => {
             <main>
                 {props.children}
             </main>
+            <Footer />
         </Fragment>
     );
 };

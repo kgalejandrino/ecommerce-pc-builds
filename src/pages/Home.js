@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import HomePage from '../HomePage/HomePage';
+import HomePage from '../components/HomePage/HomePage';
 
 const Home = () => {
     return (

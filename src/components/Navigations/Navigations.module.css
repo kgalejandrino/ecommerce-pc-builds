@@ -1,3 +1,9 @@
 .navigations {
     display: flex;
 }
+
+.footer-navigations {
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 12px;
+}

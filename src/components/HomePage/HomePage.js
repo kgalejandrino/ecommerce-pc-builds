@@ -56,7 +56,7 @@ const HomePage = () => {
             <section className={classes['section-pcbuilds']}>
                 <div className={classes['pcbuilds-wrapper']}>
                     { buildImages.map(img => {
-                        return <figure className={classes['pc-photo']}>
+                        return <figure key={img.src} className={classes['pc-photo']}>
                                     <img src={img.src} alt={img.alt} />
                                </figure>
                     })}

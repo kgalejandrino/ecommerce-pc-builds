@@ -9,11 +9,12 @@ const list = [
     { 'path': 'support', 'link': 'Support'}
 ];
 
-const Navigations = () => {
+const Navigations = (props) => {
+    
     return (
-        <nav className={classes.navigations}>
+        <nav className={props.type === 'footer-nav' ? classes['footer-navigations']: classes.navigations}>
             {list.map(item => {
-                return <Navigation key={item.path} link={item.link} />
+                return <Navigation key={item.path} link={item.link} type={props.type} />
             })}
         </nav>
     );

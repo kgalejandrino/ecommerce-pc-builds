@@ -1,5 +1,13 @@
-.navigation {
+li {
     list-style-type: none;
-    padding-left: 28px;
     cursor: pointer;
+ }
+
+.navigation {
+    padding-left: 28px;
 }
+
+.footer-navigation {
+    padding-bottom: 12px;
+}
+
