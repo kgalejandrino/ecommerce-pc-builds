@@ -30,31 +30,38 @@ h1::after {
 
 /* Section: Hero Box */
 .section-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../../assets/hero-img.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/hero-img.jpg');
     background-size: cover;
     background-position: 25% 75%;
     height: 100vh;
 }
 
 .hero-text-box {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.hero-text-box p:nth-of-type(1) {
+.small-text {
     font-size: 32px;
     color: #ccc;
 }
 
-.hero-text-box p:nth-of-type(2) {
+.big-text {
+    display: flex;
+    margin-top: 36px;
+}
+
+.big-text p {
     font-size: 54px;
     color: #fff;
     font-weight: 800;
-    margin-top: 36px;
+    padding: 12px;
 }
+
+
 
 /* Section: Features */
 .section-features .description {
@@ -66,6 +73,7 @@ h1::after {
 .card-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 42px;
 }
 
@@ -85,12 +93,11 @@ h1::after {
 /* Section: PC Build */
 .pcbuilds-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .pc-photo {
     width: 25%;
-    height: 280px;
     overflow: hidden;
 }
 
@@ -98,7 +105,7 @@ h1::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.7;
+    opacity: 0.8;
     transform: scale(1.1);
     transition: transform 0.3s, opacity 0.3s ease-in;
 }
@@ -117,7 +124,6 @@ h1::after {
 
 .img-container {
     width: 45%;
-    /* border: 1px solid red; */
 }
 
 .img-container img {
@@ -143,5 +149,113 @@ h1::after {
     margin-top: 24px;
 }
 
+
+@media only screen and (max-width: 1200px) {
+    /* Section: Shop */
+    .description-container { padding-top: 120px; } 
+}
+
+@media only screen and (max-width: 992px) {
+    /* Reusable */
+    section p { font-size: 16px; }
+
+    /* Section: Hero Box */
+    .small-text { font-size: 28px; }
+
+    .big-text p { font-size: 42px; }
+
+    /* Section: Features */
+    .section-features .description { width: 100%; }
+
+    .card { width: 30%;}
+
+    /* Section: Shop */
+    .description-container { 
+        padding-top: 100px; 
+        align-items: flex-start;
+    } 
+    
+    .description-container p {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .btn-container { width: 100%; }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Section: Hero Box */
+    .small-text { font-size: 24px; }
+
+    .big-text { margin-top: 24px; }
+
+    .big-text p { font-size: 36px; }
+
+    /* Section: Features */
+    .card { 
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    /* Section: Shop */
+    .shop-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 48px;
+    }
+
+    .img-container { width: 90%; }
+    
+    .description-container {
+        width: 90%;
+        padding-top: 0;
+        margin-top: 24px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    /* Reusable */
+    h1 { font-size: 22px;}
+    
+    /* Section: Hero Box */
+    .hero-text-box { 
+        width: 90%;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .small-text { font-size: 22px; }
+
+    .big-text { flex-direction: column; }
+
+    .big-text p {
+        font-size: 56px;
+        margin-top: 12px;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* Section: Hero Box */
+    .small-text { font-size: 18px; }
+
+    .big-text p { font-size: 42px; }
+}
+
+@media only screen and (max-width: 360px) {
+    /* Reusable */
+    h1 { font-size: 16px; }
+
+    /* Section: Hero Box */
+    .big-text p { font-size: 36px; }
+    
+    /* Section: Shop */
+    .btn-container { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-container button { margin-top: 12px; }
+}
 
 

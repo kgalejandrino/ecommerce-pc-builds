@@ -12,11 +12,11 @@ const list = [
 const Navigations = (props) => {
     
     return (
-        <nav className={props.type === 'footer-nav' ? classes['footer-navigations']: classes.navigations}>
+        <ul className={props.type === 'footer-ul' ? classes['footer-ul']: classes['main-ul']}>
             {list.map(item => {
                 return <Navigation key={item.path} link={item.link} type={props.type} />
             })}
-        </nav>
+        </ul>
     );
 };
 

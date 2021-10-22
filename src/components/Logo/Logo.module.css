@@ -1,4 +1,11 @@
 .Logo {
     font-family: 'Ruslan Display', cursive;
     font-size: 18px;
+    padding-top: 6px;
+}
+
+@media only screen and (max-width: 576px) {
+    .Logo {
+        font-size: 14px;
+    }
 }

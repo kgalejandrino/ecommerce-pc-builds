@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 <div className={`${classes['footer-links']} ${classes.card}`}>
                     <h4>Builds</h4>
-                    <Navigations type="footer-nav" />
+                    <Navigations type="footer-ul" />
                 </div>
                 <div className={`${classes['footer-newsletter']} ${classes.card}`}>
                     <h4>Newsletter</h4>
@@ -38,7 +38,7 @@ const Footer = () => {
                     <p>|</p>
                     <p>Terms &amp; Conditions</p>
                 </div>
-                <div><p>© 2021 NemirkPcBuilds. All rights reserved</p></div>
+                <div className={classes['credits-wrapper']}><p>© 2021 NemirkPcBuilds. All rights reserved</p></div>
             </div>
         </footer>
     );

@@ -3,11 +3,25 @@ li {
     cursor: pointer;
  }
 
-.navigation {
+.main-list {
     padding-left: 28px;
+    font-size: 16px;
 }
 
-.footer-navigation {
+.footer-list {
     padding-bottom: 12px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 875px) {
+    .main-list { padding-left: 16px; }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-list { 
+        padding-left: 32px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
 }
 

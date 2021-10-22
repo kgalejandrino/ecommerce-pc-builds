@@ -1,5 +1,4 @@
 footer {
-    height: 340px;
     background-color: #2e2e2e;
     display: flex;
     flex-direction: column;
@@ -59,7 +58,11 @@ footer .card p {
 .footer-newsletter input {
     width: 100%;
     height: 36px;
-    margin: 8px 0;
+    margin: 8px 0;  
+    outline: none;
+    color: #2e2e2e;
+    padding-left: 6px;
+    font-weight: 700;
 }
 
 /* Policy and Terms & Conditions */
@@ -67,13 +70,43 @@ footer .card p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 18px;
+    margin: 18px 0;
 }
 
 .policy-conditions-wrapper {
     display: flex;
 }
 
-.policy-conditions-wrapper p {
+.bottom-footer p {
     padding: 0 4px;
+}
+
+@media only screen and (max-width: 992px) {
+    footer .card { width: 30%; }
+    
+    /* Links */
+    .footer-links { padding-left: 40px; }
+}
+
+@media only screen and (max-width: 660px) {
+    .footer-wrapper { flex-direction: column; }
+
+    footer .card {
+        width: 100%;
+        margin-bottom: 28px;
+    }
+
+    /* Links */
+    .footer-links { padding-left: 0; }
+}
+
+@media only screen and (max-width: 475px) {
+    .bottom-footer p {
+        padding: 0 2px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .bottom-footer p { font-size: 12px; }
 }

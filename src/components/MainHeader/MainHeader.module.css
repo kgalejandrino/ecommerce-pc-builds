@@ -1,0 +1,45 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #0A81D1;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 999;
+}
+
+@media only screen and (max-width: 992px) {
+    .header { padding: 0 32px; }
+
+    .account-wrapper span { padding-left: 16px; }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .collapse-nav {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 60px;
+        width: 100%;
+        background-color: #181719;
+    }
+
+    .collapse-nav.closed { display: none; }
+    
+    .collapse-nav.open { display: block; }
+}
+
+@media only screen and (max-width: 576px) {
+    .header { padding: 0 18px; }
+}
+
+@media only screen and (max-width: 360px) {
+    .header { padding: 0 12px; }
+}

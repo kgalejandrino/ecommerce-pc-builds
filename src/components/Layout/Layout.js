@@ -1,22 +1,14 @@
 import React, { Fragment } from 'react';
 
 import classes from './Layout.module.css';
-import Logo from '../Logo/Logo';
-import Navigations from '../Navigations/Navigations';
 import Footer from '../Footer/Footer';
+import MainHeader from '../MainHeader/MainHeader';
 
-const Header = (props) => {
+const layout = (props) => {
     return (
         <Fragment>
-            <header className={classes.header}>
-                <Logo />
-                <Navigations />
-                <div className={classes['account-wrapper']}>
-                    <span>My Account</span>
-                    <span>Cart</span>
-                </div>
-            </header>
-            <main>
+            <MainHeader />
+            <main className={classes.main}>
                 {props.children}
             </main>
             <Footer />
@@ -24,4 +16,4 @@ const Header = (props) => {
     );
 };
 
-export default Header;
+export default layout;

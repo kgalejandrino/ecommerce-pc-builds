@@ -28,8 +28,12 @@ const HomePage = () => {
         <Fragment>
             <section className={classes['section-hero']}>
                 <div className={classes['hero-text-box']}>
-                    <p>Take your gaming experience to the next level.</p>
-                    <p>Built Different. Top Tier. No Glitching</p>
+                    <p className={classes['small-text']}>Take your gaming experience to the next level.</p>
+                    <div className={classes['big-text']}>
+                        <p>Built Different</p>
+                        <p>Top Tier</p>
+                        <p>No Glitching</p>
+                    </div>
                 </div>
             </section>
             <section className={`${classes['section-features']} ${classes.row}`}>

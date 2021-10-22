@@ -1,9 +1,16 @@
-.navigations {
+.main-ul {
     display: flex;
 }
 
-.footer-navigations {
+.footer-ul {
     font-size: 16px;
     color: #ccc;
     margin-top: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-ul {
+        flex-direction: column;
+        margin: 12px 0;
+    }
 }
