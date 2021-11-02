@@ -81,6 +81,11 @@ footer .card p {
     padding: 0 4px;
 }
 
+.footer-newsletter button {
+    width: 100%;
+    font-size: 18px;
+}
+
 @media only screen and (max-width: 992px) {
     footer .card { width: 30%; }
     

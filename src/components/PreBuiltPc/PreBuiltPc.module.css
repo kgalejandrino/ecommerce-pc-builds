@@ -1,0 +1,133 @@
+/*--- BANNER ---*/
+.text-box {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.text-box p {
+    font-weight: 300;
+    font-size: 16px;
+    color: #b9b9b9;
+}
+
+.text-box p:nth-of-type(1) { margin: 12px 0; }
+
+.customize-flex { display: flex; }
+
+.customize-flex button {
+    margin-left: 12px;
+    border-radius: 25px;
+}
+
+/*--- PRODUCTS ---*/
+.main-content {
+    width: 90%;
+    max-width: 1250px;
+    margin: 220px auto 120px auto;
+}
+
+.filter-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-flex span { font-size: 16px; }
+
+.filter-flex select {
+    border: none;
+    outline: none;
+    height: 35px;
+    padding: 0 8px;
+    color: #fff;
+    background-color: rgba(31, 31, 31, 0.7);
+}
+
+.filter-flex select option {
+    background-color:  rgba(24, 23, 25, 0.7);
+}
+
+/* CARD */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 48px;
+}
+
+.card {
+    width: 30%;
+    margin-top: 120px;
+    margin-right: 24px;
+    padding-bottom: 28px;
+    border-radius: 15px;
+    transform: scale(.9);
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    background-color: rgba(31, 31, 31, 0.7);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-img { margin-top: -5vw;}
+
+.card-img img{
+    width: 100%;
+    height: auto;
+}
+
+.card-header {
+    margin-top: 36px;
+}
+
+.card-header h3 { text-align: center; }
+
+.card-details {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #b9b9b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cpu { margin-bottom: 6px;}
+
+.price {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #d1640a;
+    margin: 18px 0;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.card-btn button {
+    width: 50%;
+    border-radius: 25px;
+}
+
+.card:hover .card-btn button {
+    background-color: #0A81D1;
+    color: #fff;
+}
+
+.card-btn button:hover { 
+    background-color: #0063a5 !important;
+    transition: background-color 0.3s;
+}
+

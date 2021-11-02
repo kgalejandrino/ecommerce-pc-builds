@@ -1,6 +1,6 @@
 /* Reusable */
 section p { 
-    color: #ccc; 
+    color: #b9b9b9; 
     line-height: 32px;
     font-weight: 300;
 }
@@ -11,14 +11,14 @@ section p {
     margin: 64px auto;
 }
 
-h1 {
+.title {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 300;
 }
 
-h1::after {
+.title::after {
     content: " ";
     border-bottom: 2px solid #0A81D1;
     height: 2px;
@@ -147,6 +147,11 @@ h1::after {
 .btn-container {
     width: 80%;
     margin-top: 24px;
+}
+
+.btn-container button {
+    margin-right: 12px;
+    font-size: 20px;
 }
 
 

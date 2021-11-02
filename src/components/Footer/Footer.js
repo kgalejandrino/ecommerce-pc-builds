@@ -27,7 +27,7 @@ const Footer = () => {
                     <h4>Newsletter</h4>
                     <p>Stay up to date and don't miss out good deals!</p>
                     <input type="text" />
-                    <Button btnType="btn-success" btnCustom="btn-footer">Subscribe</Button>
+                    <Button btnType="btn-success">Subscribe</Button>
                 </div>
             </div>
             <div className={classes['bottom-footer']}>

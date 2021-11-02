@@ -10,3 +10,19 @@ body {
     color: #fff;
     font-size: 18px;
 }
+
+a { text-decoration: none; }
+
+h1, h2, h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+

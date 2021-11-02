@@ -1,16 +1,18 @@
 li {
     list-style-type: none;
     cursor: pointer;
- }
+}
 
 .main-list {
     padding-left: 28px;
     font-size: 16px;
 }
 
-.footer-list {
-    padding-bottom: 12px;
-}
+.main-list a { color: #fff; }
+
+.footer-list { padding-bottom: 12px; }
+
+.footer-list a { color: #ccc; }
 
 /* Media Query */
 @media only screen and (max-width: 875px) {

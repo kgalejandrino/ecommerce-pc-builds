@@ -37,7 +37,7 @@ const HomePage = () => {
                 </div>
             </section>
             <section className={`${classes['section-features']} ${classes.row}`}>
-                <h1>Upgrade your pc &mdash; Boost your fps </h1>
+                <h1 className={classes.title}>Upgrade your pc &mdash; Boost your fps </h1>
                 <p className={classes.description}>Hello, we’re NemirkPcBuilds and we offer wide range of services such as gaming and streaming configuration, network and system configuration, data recovery and many more. Not sure why your computer is lagging or running slow? Let’s take care of that and get you ready to play at high level.</p>
                 <div className={classes['card-wrapper']}>
                     <div className={classes.card}>
@@ -67,7 +67,7 @@ const HomePage = () => {
                 </div>
             </section>
             <section className={`${classes['section-shop']} ${classes.row}`}>
-                <h1>Build Now &mdash; Buy Now </h1>
+                <h1 className={classes.title}>Build Now &mdash; Buy Now </h1>
                 <div className={classes['shop-wrapper']}>
                     <div className={classes['img-container']}>
                         <img src={rainbowBuild} alt="pc build with rainbow rgb light and white case" />
@@ -75,8 +75,8 @@ const HomePage = () => {
                     <div className={classes['description-container']}>
                         <p>Nemirk pc is available in full customization. Schedule an appointment with one of our IT and we can guide you from component selection to building your dream gaming setup. </p>
                         <div className={classes['btn-container']}>
-                            <Button btnType={'btn-success'} btnCustom={'btn-buy'}>Build Now</Button>
-                            <Button btnType={'btn-success'} btnCustom={'btn-buy'}>Shop Now</Button>
+                            <Button btnType={'btn-success'}>Build Now</Button>
+                            <Button btnType={'btn-success'}>Shop Now</Button>
                         </div>
                     </div>
                 </div>
