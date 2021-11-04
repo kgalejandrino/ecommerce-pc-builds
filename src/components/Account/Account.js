@@ -5,12 +5,9 @@ import classes from './Account.module.css';
 const account = (props) => {
     return (
         <div className={classes['account-wrapper']}>
-            <span className={`material-icons ${classes['icon-account']}`}>person</span>
-            <span className={`material-icons ${classes['icon-account']}`}>shopping_cart</span>
-            <span 
-                className={`material-icons ${classes['icon-account']} ${classes['icon-menu']}`}
-                onClick={props.clicked}>menu
-            </span>
+            <span><i className={`fas fa-user ${classes['icon-account']}`}></i></span>
+            <span><i className={`fas fa-shopping-cart ${classes['icon-account']}`}></i></span>
+            <span onClick={props.clicked}><i className={`fas fa-bars ${classes['icon-account']}` }></i></span>
             <span className={classes['text-account']}>My Account</span>
             <span className={classes['text-account']}>Cart</span>
         </div>

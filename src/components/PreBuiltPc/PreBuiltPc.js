@@ -31,7 +31,7 @@ const preBuiltPc = () => {
                 <p>A variety of pre-built pc, built in perfection. Choose from our broad selection of ready to shipped pc that varies in component selection and price depending on your needs and preference.</p>
                 <div className={classes['customize-flex']}>
                     <p>Want full control in customizing your dream pc setup?</p>
-                    <Button btnType="btn-success">Build Now</Button>
+                    <Button btnType="btn-primary">Build Now</Button>
                 </div>
             </div>
             <div className={classes['main-content']}>

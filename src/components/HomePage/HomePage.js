@@ -26,37 +26,30 @@ const buildImages = [
 const HomePage = () => {
     return (
         <Fragment>
-            <section className={classes['section-hero']}>
-                <div className={classes['hero-text-box']}>
-                    <p className={classes['small-text']}>Take your gaming experience to the next level.</p>
-                    <div className={classes['big-text']}>
-                        <p>Built Different</p>
-                        <p>Top Tier</p>
-                        <p>No Glitching</p>
+            <div className={classes['hero-img']}>
+                <div className={`${classes['hero-text-box']} ${classes.row}`}>
+                    <p>Take your gaming experience to the next level.</p>
+                    <h1>Goodbye Crappy Builds.</h1>
+                    <h1>Hello dream gaming setup.</h1>
+                    <Button btnType={'btn-primary'}>Shop Now</Button>
+                </div>
+            </div>
+
+            <section className={classes['section-info']}>
+                <div className={classes.row}>
+                    <div className={classes['info-wrapper']}>
+                        <div className={classes['img-container']}>
+                            <img src={rainbowBuild} alt="pc build with rainbow rgb light and white case" />
+                        </div>
+                        <div className={classes['info-description']}>   
+                            <h1>Your Money,</h1>
+                            <h1>Your Choice.</h1>
+                            <p>Nemirk pc are available in full customization. Schedule an appointment with one of our IT and we can guide you from component selection to building your dream gaming setup. </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section className={`${classes['section-features']} ${classes.row}`}>
-                <h1 className={classes.title}>Upgrade your pc &mdash; Boost your fps </h1>
-                <p className={classes.description}>Hello, we’re NemirkPcBuilds and we offer wide range of services such as gaming and streaming configuration, network and system configuration, data recovery and many more. Not sure why your computer is lagging or running slow? Let’s take care of that and get you ready to play at high level.</p>
-                <div className={classes['card-wrapper']}>
-                    <div className={classes.card}>
-                        <span className="material-icons">moving</span>
-                        <h3>Performance</h3>
-                        <p>As a gamer ourselves at NemirkPcBuilds, we understand the frustration of sudden fps drops. With that, our team makes sure that our PCs are optimized to its max performance. </p>
-                    </div>
-                    <div className={classes.card}>
-                        <span className="material-icons">engineering</span>
-                        <h3>Testing</h3>
-                        <p>Gaming has evolved over the years and so  has the system requirements. We can guarantee you that our pc meets high standard quality and is put thru a series of test to perform at peak level. </p>
-                    </div>
-                    <div className={classes.card}>
-                        <span className="material-icons">support_agent</span>
-                        <h3>Support</h3>
-                        <p>To ensure our customers satisfaction, you will be connected directly to our team of IT. We prioritize that your questions/issues be answered or resolved as quickly as possible. </p>
-                    </div>
-                </div>
-            </section>
+
             <section className={classes['section-pcbuilds']}>
                 <div className={classes['pcbuilds-wrapper']}>
                     { buildImages.map(img => {
@@ -66,17 +59,26 @@ const HomePage = () => {
                     })}
                 </div>
             </section>
-            <section className={`${classes['section-shop']} ${classes.row}`}>
-                <h1 className={classes.title}>Build Now &mdash; Buy Now </h1>
-                <div className={classes['shop-wrapper']}>
-                    <div className={classes['img-container']}>
-                        <img src={rainbowBuild} alt="pc build with rainbow rgb light and white case" />
-                    </div>
-                    <div className={classes['description-container']}>
-                        <p>Nemirk pc is available in full customization. Schedule an appointment with one of our IT and we can guide you from component selection to building your dream gaming setup. </p>
-                        <div className={classes['btn-container']}>
-                            <Button btnType={'btn-success'}>Build Now</Button>
-                            <Button btnType={'btn-success'}>Shop Now</Button>
+            
+            <section className={classes['section-features']}>
+                <div className={classes.row}>
+                    <h1 className={classes.title}>Upgrade your pc &mdash; Boost your fps </h1>
+                    <p className={classes.description}>Hello, we’re NemirkPcBuilds and we offer wide range of services such as gaming and streaming configuration, network and system configuration, data recovery and many more. Not sure why your computer is lagging or running slow? Let’s take care of that and get you ready to play at high level.</p>
+                    <div className={classes['card-wrapper']}>
+                        <div className={classes.card}>
+                            <span><i className="fas fa-level-up-alt"></i></span>
+                            <h3>Performance</h3>
+                            <p>As a gamer ourselves at NemirkPcBuilds, we understand the frustration of sudden fps drops. With that, our team makes sure that our PCs are optimized to its max performance. </p>
+                        </div>
+                        <div className={classes.card}>
+                            <span><i className="fas fa-tools"></i></span>
+                            <h3>Testing</h3>
+                            <p>Gaming has evolved over the years and so is the system requirements. We can guarantee you that our pc meets high standard quality and is put thru a series of test to perform at peak level. </p>
+                        </div>
+                        <div className={classes.card}>
+                            <span><i className="fas fa-headset"></i></span>
+                            <h3>Support</h3>
+                            <p>To ensure our customers satisfaction, you will be connected directly to our team of IT. We prioritize that your questions/issues be answered or resolved as quickly as possible. </p>
                         </div>
                     </div>
                 </div>

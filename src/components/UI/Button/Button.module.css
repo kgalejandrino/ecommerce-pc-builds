@@ -4,19 +4,20 @@
     cursor: pointer;
     outline: none;
     padding: 12px 24px;
+    font-size: 20px;
 }
 
-.btn-success {
-    background-color: #0A81D1;
+.btn-primary {
+    background-color: #ff1e20;
 }
 
-.btn-success:hover {
-    background-color: #0063a5;
+.btn-primary:hover {
+    background-color: #d11a1d;
     transition: background-color 0.3s;
 }
 
 .btn-transparent {
-    background-color: rgba(31, 31, 31, 0.7);
+    background-color: rgba(48, 48, 48, 0.6);
     color: #b9b9b9;
     font-size: 16px;
 }

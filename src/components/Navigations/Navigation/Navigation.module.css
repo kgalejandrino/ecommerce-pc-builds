@@ -6,6 +6,7 @@ li {
 .main-list {
     padding-left: 28px;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .main-list a { color: #fff; }
@@ -15,11 +16,7 @@ li {
 .footer-list a { color: #ccc; }
 
 /* Media Query */
-@media only screen and (max-width: 875px) {
-    .main-list { padding-left: 16px; }
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     .main-list { 
         padding-left: 32px;
         padding-top: 18px;

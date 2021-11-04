@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #181719;
+    background-color: #1f1f1f;
     color: #fff;
     font-size: 18px;
 }
@@ -14,7 +14,6 @@ body {
 a { text-decoration: none; }
 
 h1, h2, h3 {
-    font-weight: 300;
     text-transform: uppercase;
 }
 

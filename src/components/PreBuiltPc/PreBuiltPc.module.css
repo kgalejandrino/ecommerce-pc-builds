@@ -73,7 +73,7 @@
 }
 
 .card:hover {
-    background-color: rgba(31, 31, 31, 0.7);
+    background-color: rgba(48, 48, 48, 0.6);
     transform: scale(1.05);
     cursor: pointer;
 }

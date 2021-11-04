@@ -13,11 +13,13 @@ const MainHeader = () => {
     return (
         <Fragment>
             <header className={classes.header}>
-                <Logo />
-                <nav className={openMenu ? `${classes['collapse-nav']} ${classes.open}` : `${classes['collapse-nav']} ${classes.closed}`}>
-                    <Navigations />
-                </nav>
-                <Account clicked={handleOpenMenu}/>
+                <div className={classes.row}>
+                    <Logo />
+                    <nav className={openMenu ? `${classes['collapse-nav']} ${classes.open}` : `${classes['collapse-nav']} ${classes.closed}`}>
+                        <Navigations />
+                    </nav>
+                    <Account clicked={handleOpenMenu}/>
+                </div>
             </header>
         </Fragment>
     );
