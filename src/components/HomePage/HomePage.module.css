@@ -33,9 +33,10 @@ section p {
 
 /* Section: Hero Box */
 .hero-img {
-    background-image: linear-gradient(rgba(59, 59, 59, 0.3), rgba(0, 0, 0, 0.4)), url('../../assets/hero-img1.png');
+    background-image: linear-gradient(rgba(59, 59, 59, 0.3), rgba(0, 0, 0, 0.4)), url('../../assets/hero-img.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -63,9 +64,9 @@ section p {
     width: 160px;
 }
 
-/* Section: Shop */
+/* Section: Info */
 .section-info {
-    background-color: #c42325;
+    /* background-color: #c42325; */
     margin: 0;
 }
 
@@ -95,6 +96,34 @@ section p {
 .info-description h1 { font-size: 42px; }
 
 .info-description p { margin-top: 18px; }
+
+/* Section: PC Build */
+.section-pcbuilds { margin: 0; }
+
+.pcbuilds-wrapper {
+    display: flex;
+    flex-wrap: wrap;    
+    background-color: #000;
+}
+
+.pc-photo {
+    width: 25%;
+    overflow: hidden;
+}
+
+.pc-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 0.3s, opacity 0.3s ease-in;
+}
+
+.pc-photo img:hover {
+    opacity: 1;
+    transform: scale(1);
+}
 
 /* Section: Features */
 .section-features .description {
@@ -131,53 +160,6 @@ section p {
 }
 
 .card p { text-align: center; }
-
-/* Section: PC Build */
-.section-pcbuilds { margin: 0; }
-
-.pcbuilds-textbox {
-    height: 360px;
-    background-color: #c42325;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.pcbuilds-textbox p {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 48px;
-    margin-top: 24px;
-}
-
-.pcbuilds-wrapper {
-    display: flex;
-    flex-wrap: wrap;    
-    background-color: #000;
-}
-
-.pc-photo {
-    width: 25%;
-    overflow: hidden;
-}
-
-.pc-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-    transform: scale(1.1);
-    transition: transform 0.3s, opacity 0.3s ease-in;
-}
-
-.pc-photo img:hover {
-    opacity: 1;
-    transform: scale(1);
-}
-
 @media only screen and (max-width: 1200px) {
     /* Section: Shop */
     .shop-description { padding-top: 120px; } 

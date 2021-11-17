@@ -3,18 +3,19 @@
     color: #fff;
     cursor: pointer;
     outline: none;
-    padding: 12px 24px;
+    padding: 12px 0;
     font-size: 20px;
-}
-
-.btn-primary {
-    background-color: #ff1e20;
-}
-
-.btn-primary:hover {
-    background-color: #d11a1d;
     transition: background-color 0.3s;
 }
+
+.btn-primary { background-color: #ff1e20; }
+
+.btn-primary:hover { background-color: #d11a1d; }
+
+
+.btn-secondary { background-color: #3978c9; }
+
+.btn-secondary:hover { background-color: #134f9c; }
 
 .btn-transparent {
     background-color: rgba(48, 48, 48, 0.6);
