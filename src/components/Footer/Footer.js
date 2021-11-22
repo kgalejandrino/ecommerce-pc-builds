@@ -20,7 +20,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className={`${classes['footer-links']} ${classes.card}`}>
-                    <h4>Builds</h4>
+                    <h4>Links</h4>
                     <Navigations type="footer-ul" />
                 </div>
                 <div className={`${classes['footer-newsletter']} ${classes.card}`}>

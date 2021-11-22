@@ -1,13 +1,10 @@
-li {
-    list-style-type: none;
-    cursor: pointer;
-}
-
 .main-list {
     padding-left: 28px;
     font-size: 16px;
     text-transform: uppercase;
 }
+
+.main-list li, .footer-list li { cursor: pointer; }
 
 .main-list a { color: #fff; }
 

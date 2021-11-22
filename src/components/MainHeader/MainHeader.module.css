@@ -1,12 +1,17 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
     color: #fff;
     z-index: 999;
     width: 100%;
     background-color: #c42325;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .row {
@@ -24,34 +29,21 @@
     align-items: center;
 }
 
-.icon {
+.nav-right span {
     cursor: pointer;
-    margin-top: 4px;
     margin-left: 24px;
     font-size: 20px;
-}
-
-.cart { position: relative; }
-
-.no-of-items {
-    position: absolute;
-    top: -8px;
-    right: -14px;
-    font-size: 14px;
-    background-color: #3978c9;
-    padding: 2px 6px;
-    border-radius: 25px;
 }
 
 .icon-menu { display: none;}
 @media only screen and (max-width: 992px) {
     /* Main Navigation */
     .collapse-nav {
-        z-index: -1;
+        z-index: 100;
         position: absolute;
         left: 0;
         top: 0;
-        margin-top: 60px;
+        margin-top: 50px;
         width: 100%;
         background-color: #181719;
     }

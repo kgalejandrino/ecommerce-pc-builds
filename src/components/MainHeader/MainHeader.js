@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 
 import Logo from '../Logo/Logo';
 import Navigations from '../Navigations/Navigations';
+import CartButton from './CartButton/CartButton';
 import classes from './MainHeader.module.css';
 
 const MainHeader = (props) => {
@@ -19,10 +20,7 @@ const MainHeader = (props) => {
                     </nav>
                     <ul className={classes['nav-right']}>
                         <span><i className={`fas fa-user ${classes.icon}`}></i></span>
-                        <div className={classes.cart}>
-                            <span><i className={`fas fa-shopping-cart ${classes.icon}`}></i></span>
-                            <span className={classes['no-of-items']}>3</span>
-                        </div>
+                        <CartButton onShowCart={props.onShowCart} />
                         <span onClick={handleOpenMenu}><i className={`fas fa-bars ${classes.icon} ${classes['icon-menu']}`}></i></span>
                     </ul>
                 </div>

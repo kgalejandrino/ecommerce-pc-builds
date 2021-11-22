@@ -1,0 +1,35 @@
+.clicked-item {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    padding: 64px 0;
+    border: 1px solid red;
+}
+
+.item-img {
+    border: 1px solid blue;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.details h3 {
+    font-size: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #9b9b9b;
+}
+
+.price {
+    font-weight: 700;
+    padding-top: 12px;
+}
+
+.details li span {
+    font-size: 16px;
+}
+.details li span:nth-of-type(1) {
+    font-weight: 700;
+}
+

@@ -1,41 +1,60 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Modal from '../UI/Modal/Modal';
+import CartContext from '../../store/cart-context';
 
 import classes from './Cart.module.css';
-import product from '../../assets/pre-built1.png';
 import Button from '../UI/Button/Button';
+import CartItem from './CartItem/CartItem';
 
-const Cart = () => {
+const Cart = (props) => {
+    const cartCtx = useContext(CartContext);
+
+    const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+
+    const cartAddItemHandler = (item) => {
+        cartCtx.addItem({...item, amount: 1})
+    }
+
+    const cartRemoveItemHandler = (id, type) => {
+        if(type === 'ONE') {
+            cartCtx.removeOneItem(id);
+        }
+
+        if(type === 'ALL') {
+            cartCtx.removeItem(id);
+        }
+    }
+
+    const cartItems = (
+        <ul className={classes['cart-details']}>
+            {cartCtx.items.map(item => (
+                <CartItem 
+                    key={item.id}
+                    img={item.img}
+                    name={item.name}
+                    cpu={item.cpu}
+                    gpu={item.gpu}
+                    price={item.price}
+                    amount={item.amount}
+                    onAdd={() => cartAddItemHandler(item)}
+                    onRemove={() => cartRemoveItemHandler(item.id, 'ONE')}
+                    onRemoveAll={() => cartRemoveItemHandler(item.id, 'ALL')}
+                />
+            ))}
+        </ul>
+    );
+    
     return (
-        <Modal>
+        <Modal onCloseCart={props.onCloseCart}>
             <div className={classes.cart}>
                 <div className={classes['cart-header']}>
-                    <span>Shopping Cart</span>
-                    <span><i class="fas fa-times"></i></span>
+                    <span>Cart</span>
+                    <span onClick={props.onCloseCart}><i className="fas fa-times"></i></span>
                 </div>
-                <div className={classes['cart-details']}>
-                    <div className={classes.product}>
-                        <div className={classes['product-img']}>
-                            <img src={product} alt="pre built pc" />
-                        </div>
-                        <div className={classes['product-details']}>
-                            <h4 className={classes.name}>Abs Challenger</h4>
-                            <div className={classes.desc}>
-                                <span>AMD Ryzen5 3600 6-core 3.6 GHz</span>
-                                <span>Nvidia GeForce GTX 1650 4GB</span>
-                            </div>
-                            <span className={classes.price}>$949</span>
-                            <div className={classes.quantity}>
-                                <input type="button" value="-" />
-                                <input type="number" min="1" max="10" pattern="[0-9]*" value="1" />
-                                <input type="button" value="+" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                { cartCtx.items.length > 0 ? cartItems : <div className={classes['cart-empty']}>Your Cart is currently empty.</div> }
                 <div className={classes['cart-total']}>
                     <span>Total</span>
-                    <span>$949.00 USD</span>
+                    <span>{totalAmount}</span>
                 </div>
                 <div className={classes['cart-btns']}>
                     <Button btnType="btn-primary">View Cart</Button>
