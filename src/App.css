@@ -34,7 +34,7 @@ li { list-style-type: none; }
     margin: 0 auto;
 }
 
-.container {
+/* .container {
     width: 100%;
     animation: slide-out 0.2s ease-in;
 }
@@ -52,4 +52,4 @@ li { list-style-type: none; }
 @keyframes slide-in{
     0% { width: 100%; }
     100% { width: 80%; }
-}
+} */

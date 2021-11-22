@@ -4,9 +4,9 @@ import { useParams } from 'react-router';
 import ClickedPreBuilt from '../components/PreBuilt/ClickedPreBuilt/ClickedPreBuilt';
 import DUMMY_DATA from '../DUMMY_DATA';
 
-const PreBuiltDetail = () => {
+const PreBuiltDetail = (props) => {
     const params = useParams();
-    const preBuilt = DUMMY_DATA.find(item => item.id === +params.preBuiltId);
+    const preBuilt = DUMMY_DATA.find(item => item.product_name === params.preBuiltId);
 
     console.log(params);
     console.log(preBuilt);
@@ -27,6 +27,7 @@ const PreBuiltDetail = () => {
                 os={preBuilt.os}
                 dimension={preBuilt.dimension}
                 price={preBuilt.price}
+                onShowCart={props.onShowCart}
             />
         </Fragment>
     );

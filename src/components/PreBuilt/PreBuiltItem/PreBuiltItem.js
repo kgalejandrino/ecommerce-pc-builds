@@ -25,7 +25,7 @@ const PreBuiltItem = (props) => {
 
     return (
         <li className={classes.card}>
-            <Link to={`/pre-built-pc/${props.id}`}>
+            <Link to={`/pre-built-pc/${props.name}`}>
                 <div className={classes['card-img']}>
                     <img src={props.img} alt={props.name}/>
                 </div>

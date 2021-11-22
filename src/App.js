@@ -30,7 +30,7 @@ function App() {
   return (
     <CartProvider>
       {showCart && <Cart onCloseCart={hideCartHandler} />}
-      <div className={showCart ? "container slide" : "container"}>
+      <div className="wrapper">
         <MainHeader 
           onShowCart={showCartHandler} 
           show={showCart}
@@ -40,7 +40,7 @@ function App() {
             <Route path="/" exact component={ Home }/>
             <Route path="/build-a-pc" component={ PcBuild }/>
             <Route path="/pre-built-pc" exact component={ () => <PreBuilt onShowCart={showCartHandler} /> }/>
-            <Route path="/pre-built-pc/:preBuiltId" component={ PreBuiltDetail } />
+            <Route path="/pre-built-pc/:preBuiltId" component={ () => <PreBuiltDetail onShowCart={showCartHandler} /> } />
             <Route path="/support" component={ Support }/>
           </Switch>
         </main>
