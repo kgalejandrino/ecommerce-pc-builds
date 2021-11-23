@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import Modal from '../UI/Modal/Modal';
 import CartContext from '../../store/cart-context';
 
-import classes from './Cart.module.css';
+import classes from './SideCart.module.css';
 import Button from '../UI/Button/Button';
 import CartItem from './CartItem/CartItem';
 
-const Cart = (props) => {
+const SideCart = (props) => {
     const cartCtx = useContext(CartContext);
 
     const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
@@ -65,4 +65,4 @@ const Cart = (props) => {
     );
 };
 
-export default Cart;
+export default SideCart;

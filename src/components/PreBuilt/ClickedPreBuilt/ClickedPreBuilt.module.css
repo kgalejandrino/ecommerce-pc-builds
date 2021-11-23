@@ -9,33 +9,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 70%;
 }
 
 .details h3 {
-    font-size: 24px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+    text-transform: capitalize;
 }
 
 .details li { 
-    border-top: 1px solid #a5a5a5;
     display: flex;
 }
 
-.details li:last-child { border-bottom: 1px solid #a5a5a5; }
 
 .details li span {
     font-size: 16px;
     padding: 4px 0;
-    padding-left: 28px;
 }
 
-.details li span:nth-of-type(1) {
-    width: 20%;
-    background-color: #e7e7e7;
-}
+.details li span:nth-of-type(1) { font-weight: 700; }
 
-.details li span:nth-of-type(2) {
-    width: 70%;
+.details li span:nth-of-type(2) { 
+    padding-left: 4px; 
+    font-size: 14px;
 }
 
 .price {

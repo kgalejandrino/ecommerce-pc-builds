@@ -1,4 +1,5 @@
 import React from 'react';
+import CartButton from '../CartButton/CartButton';
 
 import classes from './CartItem.module.css';
 
@@ -16,14 +17,12 @@ const CartItem = (props) => {
                     <span>{props.gpu}</span>
                     <span className={classes.price}>{`$${props.price}`}</span>
                 </div>
-                <div className={classes.actions}>
-                    <div className={classes.add}>
-                        <button onClick={props.onRemove} disabled={props.amount === 1}>-</button>
-                        <span>{props.amount}</span>
-                        <button onClick={props.onAdd}>+</button>
-                    </div>
-                    <span className={classes.remove} onClick={props.onRemoveAll}><i className="fas fa-trash-alt"></i></span>
-                </div>
+                <CartButton 
+                    amount={props.amount}
+                    onAdd={props.onAdd}
+                    onRemove={props.onRemove}
+                    onRemoveAll={props.onRemoveAll}
+                />
             </div>
         </li>
     );

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import './App.css';
 import Home from './pages/Home';
 import PcBuild from './components/PcBuild/PcBuild';
 import PreBuilt from './components/PreBuilt/PreBuilt';
 import Support from './components/Support/Support';
-import Cart from './components/Cart/Cart';
+import SideCart from './components/Cart/SideCart';
 import MainHeader from './components/MainHeader/MainHeader';
 import Footer from './components/Footer/Footer';
-import './App.css';
 import CartProvider from './store/CartProvider';
 import PreBuiltDetail from './pages/PreBuiltDetail';
+import MainCart from './pages/MainCart';
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <CartProvider>
-      {showCart && <Cart onCloseCart={hideCartHandler} />}
+      {showCart && <SideCart onCloseCart={hideCartHandler} />}
       <div className="wrapper">
         <MainHeader 
           onShowCart={showCartHandler} 
@@ -41,6 +42,7 @@ function App() {
             <Route path="/build-a-pc" component={ PcBuild }/>
             <Route path="/pre-built-pc" exact component={ () => <PreBuilt onShowCart={showCartHandler} /> }/>
             <Route path="/pre-built-pc/:preBuiltId" component={ () => <PreBuiltDetail onShowCart={showCartHandler} /> } />
+            <Route path="/cart" component={ MainCart } />
             <Route path="/support" component={ Support }/>
           </Switch>
         </main>

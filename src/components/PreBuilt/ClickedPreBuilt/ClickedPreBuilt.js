@@ -28,7 +28,7 @@ const ClickedPreBuilt = (props) => {
                 <img src={props.img} alt={props.name} />
             </div>
             <div className={classes.details}>
-                <h3>{props.name}</h3>
+                <h3>{props.name} - {props.cpu}, {props.gpu}</h3>
                 <span className={classes.price}>{`$${props.price}`}</span>
                 <div>
                     <li>

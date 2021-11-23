@@ -1,0 +1,16 @@
+.view-cart {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: 1px solid red;
+}
+
+.view-cart h2 {
+    text-align: center;
+    padding: 42px 0;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e0e0e0;
+}
