@@ -4,7 +4,7 @@ import classes from './CartButton.module.css';
 
 const CartButton = (props) => {
     return (
-        <div className={classes['cart-button']}>
+        <div className={props.cartType === 'sidecart' ? classes['sidecart-button'] : classes['viewcart-button']}>
             <div className={classes.add}>
                 <button onClick={props.onRemove} disabled={props.amount === 1}>-</button>
                 <span>{props.amount}</span>

@@ -1,0 +1,14 @@
+.sidecart-img {
+    background-color: #e0e0e0;
+    padding: 8px 0;
+    width: 40%;
+}
+
+.maincart-img {
+    width: 150px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}

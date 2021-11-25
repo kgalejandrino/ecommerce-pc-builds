@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import PcBuild from './components/PcBuild/PcBuild';
 import PreBuilt from './components/PreBuilt/PreBuilt';
 import Support from './components/Support/Support';
-import SideCart from './components/Cart/SideCart';
+import SideCart from './components/Cart/SideCart/SideCart';
 import MainHeader from './components/MainHeader/MainHeader';
 import Footer from './components/Footer/Footer';
 import CartProvider from './store/CartProvider';
