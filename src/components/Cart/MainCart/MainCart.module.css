@@ -88,7 +88,7 @@ td {
 
 .cart-empty a {
     text-decoration: underline;
-    color:#f5f5f5;
+    color: #6e6e6e;;
 }
 
 @media only screen and (max-width: 850px) {

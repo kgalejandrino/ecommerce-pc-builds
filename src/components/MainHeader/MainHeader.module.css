@@ -6,12 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-}
-
-.header .fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
+    padding: 8px 0;
 }
 
 .row {
@@ -31,7 +26,6 @@
 
 .nav-right span {
     cursor: pointer;
-    margin-left: 24px;
     font-size: 20px;
 }
 

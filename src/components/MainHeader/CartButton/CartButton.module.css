@@ -1,4 +1,18 @@
-.cart { position: relative; }
+.cart { 
+    position: relative; 
+    margin: 0 24px;
+}
+
+.cart button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-top: 4px;
+}
+
+.cart button span { 
+    color: #fff; 
+}
 
 .no-of-items {
     position: absolute;
