@@ -28,6 +28,7 @@ const SideCartItem = () => {
                 <CartImage 
                     img={item.img}
                     name={item.name}
+                    cartType="sidecart"
                 />
                 <CartDetails 
                     key={item.id}

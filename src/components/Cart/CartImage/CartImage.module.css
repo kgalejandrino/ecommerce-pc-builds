@@ -1,14 +1,29 @@
-.sidecart-img {
+.cart-img {
     background-color: #e0e0e0;
     padding: 8px 0;
+}
+
+.sidecart {
     width: 40%;
 }
 
-.maincart-img {
+.maincart {
     width: 150px;
 }
 
 .img {
     width: 100%;
     height: auto;
+}
+
+@media only screen and (max-width: 520px) {
+    .maincart {
+        width: 120px;
+    }   
+}
+
+@media only screen and (max-width: 450px) {
+    .maincart {
+        width: 100%;
+    } 
 }

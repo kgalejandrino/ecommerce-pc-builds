@@ -1,7 +1,7 @@
 .view-cart {
     margin-top: 60px;
     margin-bottom: 60px;
-    /* border: 1px solid red; */
+    color: #1f1f1f;
 }
 
 .view-cart h2 {
@@ -22,10 +22,7 @@ th {
     padding: 20px;
 }
 
-th:nth-of-type(1) {
-    text-align: left;
-    padding-left: 24px;
-}
+th:nth-of-type(1) { text-align: left; }
 
 td {
     border: 1px solid #e0e0e0;
@@ -33,24 +30,108 @@ td {
     padding: 20px;
 }
 
-td:nth-of-type(1) {
-    border-right: none; 
-    padding-right: 0;
-    width: 150px;
-}
-
-td:nth-of-type(2) {
-    border-left: none; 
-}
-
-td:nth-of-type(3),
-td:nth-of-type(4) {
-    width: 160px;
-}  
-
 .price {
     color: #6e6e6e;
     text-align: center;
     font-size: 14px;
     padding-bottom: 24px;
+}
+
+.total-text {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+}
+
+.total-amount { 
+    text-align: center;
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.shopping {
+    color: #6e6e6e;
+}
+
+.shopping a { 
+    color: inherit;
+    font-size: 14px;
+    padding-left: 6px;
+}
+
+.shopping:hover { color: #1f1f1f; }
+
+.actions button {
+    width: 280px;
+    border-radius: 25px;
+}
+
+.row-total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+
+.cart-empty a {
+    text-decoration: underline;
+    color:#f5f5f5;
+}
+
+@media only screen and (max-width: 850px) {
+    th:nth-of-type(2),
+    th:nth-of-type(3) { display: none; }
+     
+    td { border: none; }
+
+    tr { border-bottom: 1px solid #e0e0e0; }
+}
+
+@media only screen and (max-width: 520px) {
+    .row-img { width: 200px; }
+
+    .actions { flex-direction: column-reverse; }
+
+    .shopping {
+        width: 100%;
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .row-img { 
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    .row-details { 
+        display: flex;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .row-quantity {
+        width: 100%;
+        padding: 0 20px;
+     }
 }

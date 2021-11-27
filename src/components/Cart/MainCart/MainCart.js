@@ -1,78 +1,55 @@
-import React, { useContext } from 'react';
-import CartContext from '../../../store/cart-context';
-import CartButton from '../CartButton/CartButton';
-import CartDetails from '../CartDetails/CartDetails';
-import CartImage from '../CartImage/CartImage';
+import React, { Fragment, useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from './MainCart.module.css';
+import CartContext from '../../../store/cart-context';
+import Button from '../../UI/Button/Button';
+import MainCartItem from './MainCartItem/MainCartItem';
 
 const MainCart = (props) => {
     const cartCtx = useContext(CartContext);
 
     const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
 
-    const cartAddItemHandler = (item) => {
-        cartCtx.addItem({...item, amount: 1})
-    }
-
-    const cartRemoveItemHandler = (id, type) => {
-        if(type === 'ONE') {
-            cartCtx.removeOneItem(id);
-        }
-
-        if(type === 'ALL') {
-            cartCtx.removeItem(id);
-        }
-    }
-
-    const cartItems = (
-        cartCtx.items.map(item => {
-            return <tr>
-                <td><CartImage img={item.img} name={item.name}/></td>
-                <td>
-                    <CartDetails 
-                        key={item.id}
-                        img={item.img}
-                        name={item.name}
-                        cpu={item.cpu}
-                        gpu={item.gpu}
-                        price={item.price}
-                        amount={item.amount}
-                        cartType="viewcart"
-                    />
-                </td>
-                <td>
-                    <CartButton 
-                        amount={item.amount}
-                        onAdd={() => cartAddItemHandler(item)}
-                        onRemove={() => cartRemoveItemHandler(item.id, 'ONE')}
-                        onRemoveAll={() => cartRemoveItemHandler(item.id, 'ALL')}
-                        cartType="viewcart"
-                    />  
-                </td>
-                <td>
-                    <div className={classes.price}>{`$${item.price * item.amount} USD`}</div>
-                </td>
-            </tr>
-        })
-    );
-
     return (
-        <div className={`${classes['view-cart']} row`}>
+        <form className={`${classes['view-cart']} row`}>
             <h2>Cart</h2>
-            <table className={`${classes['cart-table']} row`}>
-                <thead>
-                    <tr>
-                        <th colspan="2">Item</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    { cartItems }
-                </tbody>
-            </table>
-        </div>
+            { cartCtx.items.length > 0
+                ? <Fragment>
+                    <table className={`${classes['cart-table']} row`}>
+                        <thead>
+                            <tr>
+                                <th colSpan="2">Item</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <MainCartItem />
+                            <tr>
+                                <td colSpan="4">
+                                    <div className={classes['row-total']}>
+                                        <span className={classes['total-text']}>Total</span>
+                                        <span className={classes['total-amount']}>{totalAmount}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div className={classes.actions}>
+                        <div className={classes.shopping}>
+                            <span><i className="far fa-hand-point-left"></i></span>
+                            <Link to="/pre-built-pc">Continue Shopping</Link>
+                        </div>
+                        <Button btnType="btn-secondary">Checkout</Button>
+                    </div>
+                </Fragment>
+                : <div className={classes['cart-empty']}>
+                    <span>Your cart is currently empty.</span>
+                    <span>Continue browsing <Link to="/pre-built-pc">here</Link></span>
+                </div>
+            }
+        </form>
     );
 };
 

@@ -3,11 +3,12 @@
     padding: 0 12px;
     width: 60%;
     color: #6e6e6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.maincart-desc {
-    color: #6e6e6e;
-}
+.maincart-desc { color: #6e6e6e; }
 
 .name { 
     text-transform: uppercase; 
@@ -25,4 +26,8 @@
 .price { 
     font-weight: 700;
     font-size: 14px;
+}
+
+@media only screen and (max-width: 850px) {
+    .maincart-desc { margin-top: 24px; }
 }

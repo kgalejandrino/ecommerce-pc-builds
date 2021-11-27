@@ -1,7 +1,6 @@
 .sidecart-button { 
     display: flex; 
     justify-content: space-between;
-    margin-top: 8px;
 }
 
 .add { display: flex; }
@@ -13,7 +12,6 @@
     border: 1px solid #e0e0e0;
     padding: 4px 10px;
     color: #6e6e6e;
-    text-align: center;
 }
 
 .add span { font-size: 14px;}
@@ -37,10 +35,10 @@
 }
 
 .remove {
-    display: flex;
-    align-items: center;
     font-size: 16px;
     color: #6e6e6e;
+    display: flex;
+    align-items: center;
 }
 
 .remove:hover {
@@ -57,4 +55,17 @@
 
 .viewcart-button .remove {
     margin-top: 12px;
+}
+
+@media only screen and (max-width: 850px) {
+    .viewcart-button { 
+        flex-direction: row; 
+        justify-content: space-between;
+        margin-top: 6px;
+        margin-bottom: 24px;
+    }
+
+    .viewcart-button .remove {
+        margin-top: 0;
+    }
 }
