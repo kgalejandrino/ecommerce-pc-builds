@@ -24,7 +24,7 @@ const SideCartItem = () => {
 
     const cartItems = (
         cartCtx.items.map(item => (
-            <li className={classes['sidecart-details']}>
+            <li className={classes['sidecart-details']} key={item.id}>
                 <CartImage 
                     img={item.img}
                     name={item.name}
@@ -49,10 +49,7 @@ const SideCartItem = () => {
 
     return (      
         <ul>
-            { cartCtx.items.length > 0 
-                ? cartItems 
-                : <div className={classes['cart-empty']}>Your Cart is currently empty.</div> 
-            }
+            {cartItems}
         </ul>
     );
 };

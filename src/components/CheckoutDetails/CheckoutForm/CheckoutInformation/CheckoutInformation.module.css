@@ -1,0 +1,74 @@
+
+.form-title { font-weight: 500; }
+
+/*--- Contact Information ---*/
+.login-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-wrapper span { 
+    font-size: 16px;
+    color: #6e6e6e;
+}
+
+.login-wrapper span a { 
+    text-decoration: underline;
+}
+
+.login-wrapper span a:hover {
+    color: #1f1f1f;
+    cursor: pointer;
+}
+
+/*--- Shipping Address */
+.first-name,
+.last-name { width: 48%; }
+
+.country,
+.zip-code,
+.state { width: 32%; }
+
+/*--- Reusable Styling ---*/
+.box { 
+    margin-top: 24px;
+    margin-bottom: 36px;
+}
+
+.flex-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control {
+    position: relative;
+    margin-top: 12px;
+}
+
+.form-control label {
+    position: absolute;
+    font-size: 12px;
+    color: #6e6e6e;
+    padding-left: 12px;
+    padding-top: 4px;
+}
+
+.form-control input,
+.form-control select {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #ccc;
+    padding-left: 12px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-control select { 
+    padding-top: 12px;
+    padding-left: 8px;
+}
+
+::placeholder {
+    font-size: 16px;
+}

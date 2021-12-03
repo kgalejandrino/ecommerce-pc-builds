@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useState, useEffect, Fragment } from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
 
 import './App.css';
 import Home from './pages/Home';
@@ -11,7 +11,8 @@ import MainHeader from './components/MainHeader/MainHeader';
 import Footer from './components/Footer/Footer';
 import CartProvider from './store/CartProvider';
 import PreBuiltDetail from './pages/PreBuiltDetail';
-import MainCart from './pages/MainCart';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -28,26 +29,31 @@ function App() {
     }
   }, [showCart])
 
+  const location = useLocation();
+
   return (
     <CartProvider>
       {showCart && <SideCart onCloseCart={hideCartHandler} />}
-      <div className="wrapper">
-        <MainHeader 
-          onShowCart={showCartHandler} 
-          show={showCart}
-        />
-        <main>
-          <Switch>
-            <Route path="/" exact component={ Home }/>
-            <Route path="/build-a-pc" component={ PcBuild }/>
-            <Route path="/pre-built-pc" exact component={ () => <PreBuilt onShowCart={showCartHandler} /> }/>
-            <Route path="/pre-built-pc/:preBuiltId" component={ () => <PreBuiltDetail onShowCart={showCartHandler} /> } />
-            <Route path="/cart" component={ MainCart } />
-            <Route path="/support" component={ Support }/>
-          </Switch>
-        </main>
-        <Footer />
-      </div>
+      { location.pathname === '/checkout'
+        ? <Route path="/checkout" exact component={ Checkout } />
+        : <Fragment>
+            <MainHeader 
+              onShowCart={showCartHandler} 
+              show={showCart}
+            />
+            <main>
+              <Switch>
+                <Route path="/" exact component={ Home }/>
+                <Route path="/build-a-pc" component={ PcBuild }/>
+                <Route path="/pre-built-pc" exact component={ () => <PreBuilt onShowCart={showCartHandler} /> }/>
+                <Route path="/pre-built-pc/:preBuiltId" component={ () => <PreBuiltDetail onShowCart={showCartHandler} /> } />
+                <Route path="/cart" component={ Cart } />
+                <Route path="/support" component={ Support }/>
+              </Switch>
+            </main>
+            <Footer />
+        </Fragment>
+      }
     </CartProvider>
   );
 }

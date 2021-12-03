@@ -3,12 +3,12 @@
     padding: 8px 0;
 }
 
-.sidecart {
-    width: 40%;
-}
+.sidecart { width: 40%; }
 
-.maincart {
-    width: 150px;
+.maincart { width: 150px; }
+
+.checkout {
+    width: 80px;
 }
 
 .img {

@@ -1,5 +1,10 @@
-.logo {
+.white-logo {
     width: 160px;
+    height: auto;
+}
+
+.black-logo {
+    width: 220px;
     height: auto;
 }
 
@@ -10,7 +15,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .logo { display: none; }
+    .white-logo  { display: none; }
 
     .mobile-logo { display: block; }
 }

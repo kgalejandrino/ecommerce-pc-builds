@@ -19,15 +19,18 @@ const SideCart = (props) => {
                     <span>Cart</span>
                     <span onClick={props.onCloseCart}><i className="fas fa-times"></i></span>
                 </div>
-                <SideCartItem />
+                { cartCtx.items.length > 0 
+                    ? <SideCartItem /> 
+                    : <div className={classes['cart-empty']}>Your Cart is currently empty.</div> 
+                }   
                 <div className={classes['cart-total']}>
                     <span>Total</span>
                     <span>{totalAmount}</span>
                 </div>
                 <div className={classes['cart-btns']}>
-                    <Button btnType="btn-primary" clicked={props.onCloseCart}>
-                        <Link to="/cart">View Cart</Link>
-                    </Button>
+                    <Link to="/cart">
+                        <Button btnType="btn-primary" clicked={props.onCloseCart}>View Cart</Button>
+                    </Link>
                     <Button btnType="btn-secondary">Checkout</Button>
                 </div>
             </div>

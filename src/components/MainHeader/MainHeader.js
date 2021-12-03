@@ -14,7 +14,7 @@ const MainHeader = (props) => {
         <Fragment>
             <header className={classes.header}>
                 <div className={classes.row}>
-                    <Logo />
+                    <Logo logo="white" />
                     <nav className={openMenu ? `${classes['collapse-nav']} ${classes.open}` : `${classes['collapse-nav']} ${classes.closed}`}>
                         <Navigations />
                     </nav>

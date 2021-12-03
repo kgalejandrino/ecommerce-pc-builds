@@ -10,7 +10,7 @@ const Footer = () => {
         <footer>
             <div className={classes['footer-wrapper']}>
                 <div className={`${classes['footer-about']} ${classes.card}`}>
-                    <Logo />
+                    <Logo logo="white" />
                     <p>Not your typical pc build. We believed building pc is art and every build is treated as such.</p>
                     <a href="https://www.facebook.com/hapsonbacal" target="_blank" rel="noopener noreferrer">
                         <span><i className="fab fa-facebook-square"></i></span>

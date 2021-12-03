@@ -1,0 +1,30 @@
+.form-container { 
+    width: 100%; 
+}
+
+/* --- Form Actions ---*/
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-actions button {
+    width: 180px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.return {
+    font-size: 15px;
+    color: #6e6e6e;
+}
+
+.return a {
+    color: inherit;
+    padding-left: 8px;
+}
+
+.return:hover {
+    color: #1f1f1f;
+}

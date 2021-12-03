@@ -1,0 +1,29 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.checkout {
+    /* margin-top: 48px; */
+    margin-top: 48px;
+    margin-left: 100px;
+    margin-right: 48px;
+    width: 48%;
+    /* border: 1px solid red; */
+}
+
+/* Links */
+.links { 
+    display: flex; 
+    margin-bottom: 24px;
+}
+
+.links li{
+    font-size: 14px;
+}
+
+.links li:not(:last-child):after {
+    content: '>';
+    padding: 0 6px;
+}

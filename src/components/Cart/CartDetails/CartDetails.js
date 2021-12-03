@@ -5,12 +5,15 @@ import classes from './CartDetails.module.css';
 
 const cartDetails = (props) => {
     return (
-        <div className={props.cartType ==='sidecart' ? classes['sidecart-desc'] : classes['maincart-desc']}>
+        <div className={classes[props.cartType]}>
             <h5 className={classes.name}>{props.name}</h5>
             <div className={classes.description}>
                 <span>{props.cpu}</span>
                 <span>{props.gpu}</span>
-                <span className={classes.price}>{`$${props.price}`}</span>
+                { props.cartType !== 'checkout'
+                    ?<span className={classes.price}>{`$${props.price}`}</span>
+                    : null
+                }
             </div>
             { props.cartType === 'sidecart' 
                 ? <CartButton 

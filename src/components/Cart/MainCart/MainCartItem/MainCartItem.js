@@ -25,7 +25,7 @@ const MainCartItem = () => {
     
     return (
         cartCtx.items.map(item => 
-            <tr>
+            <tr key={item.id}>
                 <td className={classes['row-img']}>
                     <CartImage img={item.img} name={item.name} cartType="maincart"/>
                 </td>
@@ -38,7 +38,7 @@ const MainCartItem = () => {
                         gpu={item.gpu}
                         price={item.price}
                         amount={item.amount}
-                        cartType="viewcart"
+                        cartType="maincart"
                     />
                 </td>
                 <td className={classes['row-quantity']}>
@@ -47,7 +47,7 @@ const MainCartItem = () => {
                         onAdd={() => cartAddItemHandler(item)}
                         onRemove={() => cartRemoveItemHandler(item.id, 'ONE')}
                         onRemoveAll={() => cartRemoveItemHandler(item.id, 'ALL')}
-                        cartType="viewcart"
+                        cartType="maincart"
                     />  
                 </td>
                 <td className={classes['row-subtotal']}>
