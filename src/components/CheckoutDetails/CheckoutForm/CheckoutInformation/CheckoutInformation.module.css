@@ -1,7 +1,6 @@
-
+/*--- Contact Information ---*/
 .form-title { font-weight: 500; }
 
-/*--- Contact Information ---*/
 .login-wrapper {
     display: flex;
     justify-content: space-between;

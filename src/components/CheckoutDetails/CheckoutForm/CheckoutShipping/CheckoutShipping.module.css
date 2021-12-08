@@ -1,0 +1,54 @@
+.box {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 24px;
+}
+
+.flex-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.flex-info:first-child {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+}
+
+.flex-info:last-child {
+    padding-top: 12px;
+}
+
+.right-text { font-weight: 700; }
+
+.label {
+    color: #6e6e6e;
+    margin-right: 16px;
+}
+
+.title {
+    font-weight: 500;
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+/* Shipping Method */
+.shipping {
+    margin: 24px 0;
+}
+.form-control {
+    display: flex;
+    align-items: center;
+}
+
+.form-control input { 
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.form-control label {
+    color: #6e6e6e;
+}

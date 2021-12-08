@@ -6,15 +6,18 @@ import CartImage from '../../Cart/CartImage/CartImage';
 import CartDetails from '../../Cart/CartDetails/CartDetails';
 import Button from '../../UI/Button/Button';
 
-const CheckoutSummary = () => {
+const CheckoutSummary = (props) => {
     const cartCtx = useContext(CartContext);
 
+    const subTotal = cartCtx.totalAmount.toFixed(2);
+    const tax = (subTotal * .0725).toFixed(2);
+    const total = (+subTotal + +tax).toFixed(2);
+
     const cartItems = cartCtx.items.map(item => 
-        <li className={classes['items-order']}>
+        <li className={classes['items-order']} key={item.id}>
             <div className={classes.item}>
                 <CartImage img={item.img} name={item.name} cartType="checkout" />
                 <CartDetails 
-                    key={item.id}
                     img={item.img}
                     name={item.name}
                     cpu={item.cpu}
@@ -28,7 +31,7 @@ const CheckoutSummary = () => {
     );
     
     return (
-        <div className={classes['summary-container']}>
+        <div className={props.show ? `${classes['summary-container']} ${classes.show}` : classes['summary-container']}>
             <div className={classes['summary-details']}>
                 <ul className={cartCtx.items.length >= 5 ? classes['item-lists'] : null}>{ cartItems }</ul>
                 <div className={classes.coupon}>
@@ -41,7 +44,7 @@ const CheckoutSummary = () => {
                 <div className={classes['order-receipt']}>
                     <div className={classes['flex-text']}>
                         <span>Subtotal</span>
-                        <span>$115.00</span>
+                        <span>{`$${subTotal}`}</span>
                     </div>
                     <div className={classes['flex-text']}>
                         <span>Shipping</span>
@@ -49,12 +52,12 @@ const CheckoutSummary = () => {
                     </div>
                     <div className={classes['flex-text']}>
                         <span>Taxes(estimated)</span>
-                        <span>$10.36</span>
+                        <span>{`$${tax}`}</span>
                     </div>
                 </div>
                 <div className={classes['flex-text']}>
                     <span>Total</span>
-                    <span>$236.00</span>
+                    <span>{`$${total}`}</span>
                 </div>
             </div>
         </div>

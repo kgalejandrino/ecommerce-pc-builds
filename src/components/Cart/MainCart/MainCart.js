@@ -41,7 +41,9 @@ const MainCart = (props) => {
                             <span><i className="far fa-hand-point-left"></i></span>
                             <Link to="/pre-built-pc">Continue Shopping</Link>
                         </div>
-                        <Button btnType="btn-secondary">Checkout</Button>
+                        <Link to="/checkout">
+                            <Button btnType="btn-secondary">Checkout</Button>
+                        </Link>
                     </div>
                 </Fragment>
                 : <div className={classes['cart-empty']}>

@@ -31,7 +31,9 @@ const SideCart = (props) => {
                     <Link to="/cart">
                         <Button btnType="btn-primary" clicked={props.onCloseCart}>View Cart</Button>
                     </Link>
-                    <Button btnType="btn-secondary">Checkout</Button>
+                    <Link to="/checkout">
+                        <Button btnType="btn-secondary" clicked={props.onCloseCart}>Checkout</Button>
+                    </Link>
                 </div>
             </div>
         </Modal>
