@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import Home from './pages/Home';
@@ -29,15 +29,13 @@ function App() {
     }
   }, [showCart])
 
-  const location = useLocation();
-
   return (
     <CartProvider>
       {showCart && <SideCart onCloseCart={hideCartHandler} />}
-      { location.pathname === '/checkout'
-        ? <Route path="/checkout" exact component={ Checkout } />
-        : <Fragment>
-            <MainHeader 
+      <Switch>
+        <Route path="/checkout/information" component={ Checkout } />
+        <Route>
+        <MainHeader 
               onShowCart={showCartHandler} 
               show={showCart}
             />
@@ -49,11 +47,12 @@ function App() {
                 <Route path="/pre-built-pc/:preBuiltId" component={ () => <PreBuiltDetail onShowCart={showCartHandler} /> } />
                 <Route path="/cart" component={ Cart } />
                 <Route path="/support" component={ Support }/>
+                <Route path="/checkout" component={ Checkout } />
               </Switch>
             </main>
             <Footer />
-        </Fragment>
-      }
+        </Route>
+      </Switch>
     </CartProvider>
   );
 }

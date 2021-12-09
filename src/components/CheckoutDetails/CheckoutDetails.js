@@ -1,5 +1,6 @@
 
 import React, { Fragment, useContext, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Logo from '../Logo/Logo';
 import CartContext from '../../store/cart-context';
@@ -23,10 +24,10 @@ const CheckoutDetails = () => {
             <div className={classes['links-container']}>
                 <div className={classes['links-details']}>
                     <ul className={classes.links}>
-                        <li><a>Cart</a></li>
-                        <li><a>Information</a></li>
-                        <li><a>Shipping</a></li>
-                        <li><a>Payment</a></li>
+                        <li><NavLink activeClassName={classes.active} to="/cart">Cart</NavLink></li>
+                        <li><NavLink activeClassName={classes.active} to="/checkout/information">Information</NavLink></li>
+                        <li><NavLink activeClassName={classes.active} to="/checkout/shipping">Shipping</NavLink></li>
+                        <li><NavLink activeClassName={classes.active} to="/checkout/payment">Payment</NavLink></li>
                     </ul>
                     <Logo logo="black" />
                 </div>

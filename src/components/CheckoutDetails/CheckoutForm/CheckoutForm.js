@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route} from 'react-router-dom';
 
 import classes from './CheckoutForm.module.css';
 import Button from '../../UI/Button/Button';
@@ -10,8 +10,10 @@ const checkoutForm = () => {
     return (
         <div className={classes['form-container']}>
             <div className={classes['form-details']}>
-                {/* <CheckoutInformation /> */}
-                <CheckoutShipping />
+                <Route path="/checkout/information">
+                    <CheckoutInformation />
+                </Route>
+                {/* <CheckoutShipping /> */}
                 <div className={classes['form-actions']}>
                     <div className={classes.return}>
                         <span><i className="far fa-hand-point-left"></i></span>

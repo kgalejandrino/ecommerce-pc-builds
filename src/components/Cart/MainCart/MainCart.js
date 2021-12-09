@@ -41,7 +41,7 @@ const MainCart = (props) => {
                             <span><i className="far fa-hand-point-left"></i></span>
                             <Link to="/pre-built-pc">Continue Shopping</Link>
                         </div>
-                        <Link to="/checkout">
+                        <Link to="/checkout/information">
                             <Button btnType="btn-secondary">Checkout</Button>
                         </Link>
                     </div>
